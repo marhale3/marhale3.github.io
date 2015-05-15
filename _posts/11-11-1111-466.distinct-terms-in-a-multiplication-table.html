@@ -1,0 +1,52 @@
+---
+layout: problem
+title: 'Distinct terms in a multiplication table'
+problemId: 466
+answer: -1
+---
+
+<style type="text/css">
+table.p466, table.p466 th, table.p466 td {
+  border-width: 1px 1px 1px 1px;
+  border-style: solid solid solid solid;
+  border-color: black black black black;
+  text-align:right;
+  -moz-border-radius: 0px 0px 0px 0px;
+}
+table.p466 {
+  table-layout: fixed;
+  border-spacing: 1px;
+  border-collapse: separate;
+  background-color: rgb(224,237,252);
+}
+table.p466 th, table.p466 td {
+  padding: 1px 6px 1px 6px;
+  width: 20%;
+}
+table.p466 th { background-color: rgb(193,218,249); }
+table.p466 td { background-color: rgb(255,255,255); }
+</style>
+
+
+<p>Let P(<var>m</var>,<var>n</var>) be the number of <i>distinct</i> terms in an <var>m</var>&times;<var>n</var> multiplication table.</p>
+
+<p>For example, a 3&times;4 multiplication table looks like this:</p>
+
+<p><center><table class="p466">
+<tr><th>&times;</th> <th>1</th><th>2</th><th>3</th><th>4</th></tr>
+<tr><th>1</th> <td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><th>2</th> <td>2</td><td>4</td><td>6</td><td>8</td></tr>
+<tr><th>3</th> <td>3</td><td>6</td><td>9</td><td>12</td></tr>
+</table></center></p>
+
+
+
+<p>There are 8 distinct terms {1,2,3,4,6,8,9,12}, therefore P(3,4) = 8.</p>
+
+<p>You are given that:<br />
+P(64,64) = 1263,<br />
+P(12,345) = 1998, and<br />
+P(32,10<sup>15</sup>) = 13826382602124302.</p>
+
+<p>Find P(64,10<sup>16</sup>).</p>
+

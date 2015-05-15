@@ -1,0 +1,30 @@
+---
+layout: problem
+title: 'Fractional Sequences'
+problemId: 343
+answer: -1
+---
+
+<p>For any positive integer <var>k</var>, a finite sequence a<sub><var>i</var></sub> of fractions x<sub><var>i</var></sub>/y<sub><var>i</var></sub> is defined by:<br />
+a<sub>1</sub> = 1/<var>k</var> and<br />
+a<sub><var>i</var></sub> = (x<sub><var>i</var>-1</sub>+1)/(y<sub><var>i</var>-1</sub>-1) reduced to lowest terms for <var>i</var>>1.<br />
+When a<sub><var>i</var></sub> reaches some integer <var>n</var>, the sequence stops. (That is, when y<sub><var>i</var></sub>=1.)<br />
+Define f(<var>k</var>) = <var>n</var>. <br />
+For example, for <var>k</var> = 20:
+</p>
+
+<p>
+1/20 &rarr; 2/19 &rarr; 3/18 = 1/6 &rarr; 2/5 &rarr; 3/4 &rarr; 4/3 &rarr; 5/2 &rarr; 6/1 = 6
+</p>
+
+<p>
+So f(20) = 6.
+</p>
+
+<p>
+Also f(1) = 1, f(2) = 2, f(3) = 1 and &Sigma;f(<var>k</var><sup>3</sup>) = 118937 for 1 &le; <var>k</var> &le; 100.
+</p>
+
+<p>
+Find &Sigma;f(<var>k</var><sup>3</sup>) for 1 &le; <var>k</var> &le; 2&times;10<sup>6</sup>.
+</p>

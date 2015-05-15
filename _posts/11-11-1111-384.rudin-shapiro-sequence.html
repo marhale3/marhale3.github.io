@@ -1,0 +1,32 @@
+---
+layout: problem
+title: 'Rudin-Shapiro sequence'
+problemId: 384
+answer: -1
+---
+
+<P>Define the sequence a(n) as the number of adjacent pairs of ones in the binary expansion of n (possibly overlapping).
+<BR/>E.g.: a(5) = a(101<sub>2</sub>) = 0, a(6) = a(110<sub>2</sub>) = 1, a(7) = a(111<sub>2</sub>) = 2</P>
+
+<P>Define the sequence b(n) = (-1)<sup>a(n)</sup>.
+<BR/>This sequence is called the <B>Rudin-Shapiro</B> sequence.</P>
+<P>Also consider the summatory sequence of b(n): <img src=project/images/p384_formula.gif style="margin-top:-9px;">.</P>
+
+<P>The first couple of values of these sequences are:
+<BR/><TT>n&nbsp; &nbsp; &nbsp &nbsp; 0 &nbsp &nbsp; 1 &nbsp &nbsp; 2 &nbsp &nbsp; 3 &nbsp &nbsp; 4 &nbsp &nbsp; 5 &nbsp &nbsp; 6 &nbsp &nbsp; 7
+<BR/>a(n) &nbsp &nbsp; 0 &nbsp &nbsp; 0 &nbsp &nbsp; 0 &nbsp &nbsp; 1 &nbsp &nbsp; 0 &nbsp &nbsp; 0 &nbsp &nbsp; 1 &nbsp &nbsp; 2
+<BR/>b(n) &nbsp &nbsp; 1 &nbsp &nbsp; 1 &nbsp &nbsp; 1 &nbsp &nbsp;-1 &nbsp &nbsp; 1 &nbsp &nbsp; 1 &nbsp &nbsp;-1 &nbsp &nbsp; 1
+<BR/>s(n) &nbsp &nbsp; 1 &nbsp &nbsp; 2 &nbsp &nbsp; 3 &nbsp &nbsp; 2 &nbsp &nbsp; 3 &nbsp &nbsp; 4 &nbsp &nbsp; 3 &nbsp &nbsp; 4</TT></P>
+
+<P>The sequence s(n) has the remarkable property that all elements are positive and every positive integer k occurs exactly k times.</P>
+
+<P>Define g(t,c), with 1 &le; c &le; t, as the index in s(n) for which t occurs for the c'th time in s(n).
+<BR/>E.g.: g(3,3) = 6, g(4,2) = 7 and g(54321,12345) = 1220847710.</P>
+
+<P>Let F(n) be the fibonacci sequence defined by:
+<BR/>F(0)=F(1)=1 and
+<BR/>F(n)=F(n-1)+F(n-2) for n>1.</P>
+
+<P>Define GF(t)=g(F(t),F(t-1)).</P>
+
+<P>Find &Sigma;GF(t) for 2&le;t&le;45.</P>

@@ -121,54 +121,62 @@ if(typeof(Storage) !== "undefined") {
 	if(!yourAnswers)
 		yourAnswers = '{}';
 	yourAnswers = JSON.parse(yourAnswers);
-	moment.locale('fa');
-    if($('#answer').length) {
-		var $answer = $('#answer'),
-			problemId = $answer.data('problem'),
-			answer = $answer.data('answer')
-		if(yourAnswers['problem-'+problemId] && yourAnswers['problem-'+problemId].answer == answer) {
-			$("#answerForm").hide();
-			$("#answerIdOk").show();
-			$("#solvedAt").html(moment(yourAnswers['problem-'+problemId].time).fromNow());
-			setInterval(function(){ $("#solvedAt").html(moment(yourAnswers['problem-'+problemId].time).fromNow()) }, 10000);
-		} else {
-			$("#answerForm").submit(function() {
-				if($answer.val() != answer) {
-					humane.log('پاسخ شما صحیح نیست!');
-					return false;
-				}
+}
+moment.locale('fa');
+if($('#answer').length) {
+	var $answer = $('#answer'),
+		problemId = $answer.data('problem'),
+		answer = $answer.data('answer')
+	if(typeof(Storage) !== "undefined" && yourAnswers['problem-'+problemId] && yourAnswers['problem-'+problemId].answer == answer) {
+		$("#answerForm").hide();
+		$("#answerIdOk").show();
+		$("#solvedAt").html(moment(yourAnswers['problem-'+problemId].time).fromNow());
+		setInterval(function(){ $("#solvedAt").html(moment(yourAnswers['problem-'+problemId].time).fromNow()) }, 10000);
+	} else {
+		$("#answerForm").submit(function() {
+			if(answer == -1) {
+				humane.log('متاسفیم، سیستم داوری هنوز برای این سوال تکمیل نشده‌است!');
+				return false;
+			}
+			if($answer.val() != answer) {
+				humane.log('پاسخ شما صحیح نیست!');
+				return false;
+			}
+			if(typeof(Storage) !== "undefined") {
 				yourAnswers['problem-'+problemId] = {
 					'answer': $answer.val(),
 					'time': moment()
 				};
 				localStorage.setItem('solveds', JSON.stringify(yourAnswers));
-				$("#answerForm").hide();
-				$("#answerIdOk").show();
-				$("#solvedAt").html(moment(yourAnswers['problem-'+problemId].time).fromNow())
-				setInterval(function(){ $("#solvedAt").html(moment(yourAnswers['problem-'+problemId].time).fromNow()) }, 10000);
-				humane.log('احسنت، پاسخ شما صحیح بود!');
-				return false;
-			})
-		}
+			}
+			$("#answerForm").hide();
+			$("#answerIdOk").show();
+			var solveTime = moment();
+			$("#solvedAt").html(moment(solveTime).fromNow())
+			setInterval(function(){ $("#solvedAt").html(moment(solveTime).fromNow()) }, 10000);
+			humane.log('احسنت، پاسخ شما صحیح بود!');
+			return false;
+		})
 	}
-	if($("#problems").length) {
-		var $problems = $("#problems").find('.problem');
-		function checkProblems() {
-			$problems.each(function() {
-				var problemId = $(this).data('problem'),
-					answer = $(this).data('answer');
+}
+if(typeof(Storage) !== "undefined" && $("#problems").length) {
+	var $problems = $("#problems").find('.problem');
+	function checkProblems() {
+		$problems.each(function() {
+			var problemId = $(this).data('problem'),
+				answer = $(this).data('answer');
 
-				if(yourAnswers['problem-'+problemId] && yourAnswers['problem-'+problemId].answer == answer) {
-					$(this).addClass('list-group-item-success');
-					$(this).find('.solved').show();
-					$(this).find('.solvedAt').html(moment(yourAnswers['problem-'+problemId].time).fromNow());
-				}
-			});
-		}
-		checkProblems();
-		setInterval(function(){checkProblems()}, 60000);
+			if(yourAnswers['problem-'+problemId] && yourAnswers['problem-'+problemId].answer == answer) {
+				$(this).addClass('list-group-item-success');
+				$(this).find('.solved').show();
+				$(this).find('.solvedAt').html(moment(yourAnswers['problem-'+problemId].time).fromNow());
+			}
+		});
 	}
-} else {
+	checkProblems();
+	setInterval(function(){checkProblems()}, 60000);
+}
+if(!(typeof(Storage) !== "undefined")) {
     // Sorry! No Web Storage support..
-	alert('متاسفیم! برای کارکردن این وب‌سایت، نیاز هست تا مرورگر شما از Storage پشتیبانی کند! :(');
+	humane.log('متاسفیم! برای کارکردن این وب‌سایت، نیاز هست تا مرورگر شما از Storage پشتیبانی کند! :(');
 }

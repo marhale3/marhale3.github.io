@@ -1,0 +1,26 @@
+---
+layout: problem
+title: 'Intersections'
+problemId: 165
+answer: -1
+---
+
+<p>A segment is uniquely defined by its two endpoints.<br /> By considering two line segments in plane geometry there are three possibilities:<br /> 
+the segments have zero points, one point, or infinitely many points in common.</p>
+<p>Moreover when two segments have exactly one point in common it might be the case that that common point is an endpoint of either one of the segments or of both. If a common point of two segments is not an endpoint of either of the segments it is an interior point of both segments.<br />
+We will call a common point T of two segments L<sub>1</sub> and L<sub>2</sub> a true intersection point of L<sub>1</sub> and L<sub>2</sub>  if T is the only common point of L<sub>1</sub> and L<sub>2</sub>  and T is an interior point of both segments.
+</p>
+<p>Consider the three segments L<sub>1</sub>, L<sub>2</sub>, and L<sub>3</sub>:</p>
+<p style="margin-left:20px;">L<sub>1</sub>: (27, 44) to (12, 32)<br />
+L<sub>2</sub>: (46, 53) to (17, 62)<br />
+L<sub>3</sub>: (46, 70) to (22, 40)</p>
+<p>It can be verified that line segments L<sub>2</sub> and L<sub>3</sub> have a true intersection point. We note that as the one of the end points of L<sub>3</sub>: (22,40) lies on L<sub>1</sub> this is not considered to be a true point of intersection. L<sub>1</sub> and L<sub>2</sub> have no common point. So among the three line segments, we find one true intersection point.</p>
+<p>Now let us do the same for 5000 line segments. To this end, we generate 20000 numbers using the so-called &quot;Blum Blum Shub&quot; pseudo-random number generator.</p>
+<p style="margin-left:50px;">s<sub>0</sub> = 290797<br /><br />
+s<sub>n+1</sub> = s<sub>n</sub>&times;s<sub>n</sub> (modulo 50515093)<br /><br />
+t<sub>n</sub> = s<sub>n</sub> (modulo 500)</p>
+<p>To create each line segment, we use four consecutive numbers t<sub>n</sub>. That is, the first line segment is given by:</p>
+<p>(t<sub>1</sub>, t<sub>2</sub>) to (t<sub>3</sub>, t<sub>4</sub>)</p>
+<p>The first four numbers computed according to the above generator should be: 27, 144, 12 and 232. The first segment would thus be (27,144) to (12,232).</p>
+<p>How many distinct true intersection points are found among the 5000 line segments?</p>
+

@@ -1,0 +1,24 @@
+---
+layout: problem
+title: 'Smooth divisors of binomial coefficients'
+problemId: 468
+answer: -1
+---
+
+<p>An integer is called <strong><var>B</var>-smooth</strong> if none of its prime factors is greater than <var>B</var>.</p>
+
+<p>Let S<sub><var>B</var></sub>(<var>n</var>) be the largest <var>B</var>-smooth divisor of <var>n</var>.<br/>
+Examples:<br/>
+S<sub>1</sub>(10) = 1<br/>
+S<sub>4</sub>(2100) = 12<br/>
+S<sub>17</sub>(2496144) = 5712</p>
+
+<p>Define F(<var>n</var>) = &sum;<sub>1&le;<var>B</var>&le;<var>n</var></sub> &sum;<sub>0&le;<var>r</var>&le;<var>n</var></sub> S<sub><var>B</var></sub>(C(<var>n</var>,<var>r</var>)). Here, C(<var>n</var>,<var>r</var>) denotes the binomial coefficient.<br/>
+Examples:<br/>
+F(11) = 3132<br/>
+F(1&nbsp;111) mod 1&nbsp;000&nbsp;000&nbsp;993 = 706036312<br/>
+F(111&nbsp;111) mod 1&nbsp;000&nbsp;000&nbsp;993 = 22156169</p>
+
+<p>Find F(11&nbsp;111&nbsp;111) mod 1&nbsp;000&nbsp;000&nbsp;993.</p>
+
+

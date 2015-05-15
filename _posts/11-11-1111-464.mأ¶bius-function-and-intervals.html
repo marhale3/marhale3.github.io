@@ -1,0 +1,38 @@
+---
+layout: problem
+title: 'Möbius function and intervals'
+problemId: 464
+answer: -1
+---
+
+<p>
+The <b>M&ouml;bius function</b>, denoted <var>&mu;</var>(<var>n</var>), is defined as:
+<ul>
+<li><var>&mu;</var>(<var>n</var>) = (-1)<sup><var>&omega;</var>(<var>n</var>)</sup> if <var>n</var> is squarefree (where <var>&omega;</var>(<var>n</var>) is the number of distinct prime factors of <var>n</var>)</li>
+<li><var>&mu;</var>(<var>n</var>) = 0 if <var>n</var> is not squarefree.</li>
+</ul>
+</p>
+
+<p>
+Let P(<var>a</var>,<var>b</var>) be the number of integers <var>n</var> in the interval [<var>a</var>,<var>b</var>] such that <var>&mu;</var>(<var>n</var>) = 1.<br/>
+Let N(<var>a</var>,<var>b</var>) be the number of integers <var>n</var> in the interval [<var>a</var>,<var>b</var>] such that <var>&mu;</var>(<var>n</var>) = -1.<br/>
+For example, P(2,10) = 2 and N(2,10) = 4.
+</p>
+
+<p>
+Let C(<var>n</var>) be the number of integer pairs (<var>a</var>,<var>b</var>) such that:
+<ul>
+<li> 1&nbsp;&le;&nbsp;<var>a</var>&nbsp;&le;&nbsp;<var>b</var>&nbsp;&le;&nbsp;<var>n</var>,</li>
+<li> 99&middot;N(<var>a</var>,<var>b</var>)&nbsp;&le;&nbsp;100&middot;P(<var>a</var>,<var>b</var>), and</li>
+<li> 99&middot;P(<var>a</var>,<var>b</var>)&nbsp;&le;&nbsp;100&middot;N(<var>a</var>,<var>b</var>).</li>
+</ul>
+</p>
+
+<p>
+For example, C(10)&nbsp;=&nbsp;13, C(500)&nbsp;=&nbsp;16676 and C(10&nbsp;000)&nbsp;=&nbsp;20155319.
+</p>
+
+<p>
+Find C(20&nbsp;000&nbsp;000).
+</p>
+

@@ -1,0 +1,16 @@
+---
+layout: problem
+title: 'Roots on the Rise'
+problemId: 479
+answer: -1
+---
+
+<p>Let <var>a</var><sub>k</sub>, <var>b</var><sub>k</sub>, and <var>c</var><sub>k</sub> represent the three solutions (real or complex numbers) to the expression 1/<var>x</var> = (<var>k</var>/<var>x</var>)<sup>2</sup>(<var>k</var>+<var>x</var><sup>2</sup>) - <var>kx</var>.</p>
+
+<p>For instance, for <var>k</var> = 5, we see that {<var>a</var><sub>5</sub>, <var>b</var><sub>5</sub>, <var>c</var><sub>5</sub>} is approximately {5.727244, -0.363622+2.057397i, -0.363622-2.057397i}.</p>
+
+<p>Let S(<var>n</var>) = Σ (<var>a</var><sub>k</sub>+<var>b</var><sub>k</sub>)<sup><var>p</var></sup>(<var>b</var><sub>k</sub>+<var>c</var><sub>k</sub>)<sup><var>p</var></sup>(<var>c</var><sub>k</sub>+<var>a</var><sub>k</sub>)<sup><var>p</var></sup> for all integers <var>p</var>, <var>k</var> such that 1 ≤ <var>p</var>, <var>k</var> ≤ <var>n</var>. </p>
+
+<p>Interestingly, S(<var>n</var>) is always an integer. For example, S(4) = 51160.</p>
+
+<p>Find S(10<sup>6</sup>) modulo 1 000 000 007.</p>

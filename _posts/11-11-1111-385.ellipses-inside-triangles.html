@@ -1,0 +1,35 @@
+---
+layout: problem
+title: 'Ellipses inside triangles'
+problemId: 385
+answer: -1
+---
+
+<P>
+For any triangle <var>T</var> in the plane, it can be shown that there is a unique ellipse with largest area that is completely inside <var>T</var>.
+<P align=center>
+<img src=project/images/p385_ellipsetriangle.png></P>
+<P>
+For a given <var>n</var>, consider triangles <var>T</var> such that:<BR />
+- the vertices of <var>T</var> have integer coordinates with absolute value &le; n, and <BR />
+- the <b>foci</b><sup>1</sup> of the largest-area ellipse inside <var>T</var> are (&radic;13,0) and (-&radic;13,0).<BR />
+Let A(<var>n</var>) be the sum of the areas of all such triangles.
+</p>
+<P>
+For example, if <var>n</var> = 8, there are two such triangles. Their vertices are (-4,-3),(-4,3),(8,0) and (4,3),(4,-3),(-8,0), and the area of each triangle is 36. Thus A(8) = 36 + 36 = 72.
+</P>
+<P>
+It can be verified that A(10) = 252, A(100) = 34632 and A(1000) = 3529008.
+</P>
+<P>
+Find A(1 000 000 000).
+</P>
+<P>
+
+<sup>1</sup>The <b>foci</b> (plural of <b>focus</b>) of an ellipse are two points A and B such that for every point P on the boundary of the ellipse, <var>AP</var> + <var>PB</var> is constant.
+
+
+</p>
+
+
+
