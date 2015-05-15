@@ -1,0 +1,19 @@
+---
+layout: global
+---
+<div class="panel panel-default">
+	<div class="panel-heading">
+		لیست سوالات
+	</div>
+	<div class="list-group" id="problems">
+		{% assign problems = site.posts | sort: "id" %}
+		{% for problem in problems %}
+			<a class="list-group-item problem" href="{{ problem.url }}" data-answer="{{ problem.answer }}" data-problem="{{ problem.problemId }}">
+			<small class="pull-left solved" style="display:none">
+				حل‌شده در: <span class="solvedAt"></span>
+			</small>
+			{{ problem.problemId }} - {{ problem.title }}
+			</a>
+		{% endfor %}
+	</div>
+</div>
