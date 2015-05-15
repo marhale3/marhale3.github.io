@@ -1,3 +1,4 @@
 permalink: /problem/:title
 name: "مرحله ۳"
 encoding: utf-8
+baseurl:   //marhale3.github.io
