@@ -1,10 +1,1 @@
 permalink: /problem/:title 
-
-name: "پروجکت اویلر"
-encoding: utf-8
-
-paginate: 1
-
-paginate_path: problems/page:num
-
-baseurl: "/"
