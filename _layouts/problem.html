@@ -1,16 +1,39 @@
 ---
 layout: global
 ---
+<div id="problemNextPrevious">
+	<div class="pull-right">
+		{% if page.next.url %}<a href="{{ page.next.url }}" data-toggle="tooltip" data-placement="top" title="سوال بعدی - {{ page.next.title }}">{% endif %}
+			<span class="glyphicon glyphicon-arrow-right"></span>
+		{% if page.next.url %}</a>{% endif %}
+	</div>
+	<div class="pull-left">
+		{% if page.previous.url %}<a href="{{ page.previous.url }}" data-toggle="tooltip" data-placement="top" title="سوال قبلی - {{ page.previous.title }}">{% endif %}
+			<span class="glyphicon glyphicon-arrow-left"></span>
+		{% if page.previous.url %}</a>{% endif %}
+	</div>
+</div>
 <div class="panel panel-default">
   <div class="panel-heading">
-	<div class="pull-left">
+	<div class="pull-left problemButtons">
 		<a href="https://github.com/marhale3/marhale3.github.io/edit/master/{{ page.path }}" data-toggle="tooltip" data-placement="top" title="ویرایش یا ترجمه این پرسش">
 			<span class="glyphicon glyphicon-pencil"></span>
 		</a>
+		<a href="https://projecteuler.net/problem={{ page.problemId }}" data-toggle="tooltip" data-placement="top" title="مشاهده سوال در وب‌سایت پروجکت اویلر">
+			<span class="glyphicon glyphicon-link"></span>
+		</a>
 	</div>
-	<h3 class="panel-title">{{ page.title }}</h3>
+	<h3 class="panel-title">{{ page.title }}
+	</h3>
   </div>
   <div class="panel-body" dir="auto">
+	{% if page.difficulty > 0 %}
+		<div class="progress" data-toggle="tooltip" data-placement="top" title="دشواری: {{ page.difficulty }}%">
+		  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ page.difficulty }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ page.difficulty }}%">
+			<span class="sr-only">دشواری: {{ page.difficulty }}%</span>
+		  </div>
+		</div>
+	{% endif %}
 	{{ content }}
   </div>
 </div>

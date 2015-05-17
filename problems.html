@@ -14,6 +14,13 @@ title: لیست سوالات
 				حل‌شده در: <span class="solvedAt"></span>
 			</small>
 			<strong>{{ problem.problemId }} -</strong> {{ problem.title }}
+			{% if problem.difficulty > 0 %}
+				<div class="progress problemDifficulty" data-toggle="tooltip" data-placement="left" title="دشواری: {{ problem.difficulty }}%">
+				  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ problem.difficulty }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ problem.difficulty }}%">
+					<span class="sr-only">دشواری: {{ problem.difficulty }}%</span>
+				  </div>
+				</div>
+			{% endif %}
 			</a>
 		{% endfor %}
 	</div>

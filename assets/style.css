@@ -40,6 +40,47 @@ footer {
 	font-size: 12px;
 }
 
+.problemDifficulty {
+	display: inline-block;
+	width: 30%;
+	height: 15px;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+
+.problemButtons a {
+	color: #999;
+	text-decoration: none;
+	display: inline-block;
+	*display: inline;
+	padding: 0 2px;
+}
+
+.problemButtons a:hover {
+	color: #000;
+}
+
+#problemNextPrevious {
+	font-size: 18px;
+	height: 24px;
+}
+
+#problemNextPrevious:after {
+	clear: both;
+	content: ' ';
+}
+
+#problemNextPrevious div {
+	color: #666;
+}
+
+#problemNextPrevious div a {
+	color: #5259db;
+}
+
+#problemNextPrevious div .tooltip-inner {
+	color: #fff;
+}
 
 html,
 body {
