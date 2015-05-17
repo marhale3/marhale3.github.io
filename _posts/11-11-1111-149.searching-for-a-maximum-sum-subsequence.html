@@ -1,8 +1,8 @@
 ---
 layout: problem
-title: 'Searching for a maximum-sum subsequence'
+title: "Searching for a maximum-sum subsequence"
 problemId: 149
-answer: -1
+answer: 52852124
 ---
 
 <p>Looking at the table below, it is easy to verify that the maximum possible sum of adjacent numbers in any direction (horizontal, vertical, diagonal or anti-diagonal) <span style="white-space:nowrap">is 16 (= 8 + 7 + 1).</span></p>
@@ -12,3 +12,17 @@ answer: -1
 <tr><td>9</td><td>&minus;6</td><td>5</td><td>1</td></tr>
 <tr><td>3</td><td>2</td><td>7</td><td>3</td></tr>
 <tr><td>&minus;1</td><td>8</td><td>&minus;4</td><td>&nbsp; 8</td></tr></tbody></table>
+</div>
+
+<p>Now, let us repeat the search, but on a much larger scale:</p>
+
+<p>First, generate four million pseudo-random numbers using a specific form of what is known as a "Lagged Fibonacci Generator":</p>
+
+<p>For 1 &le; <i>k</i> &le; 55, <i>s</i><sub><i>k</i></sub> = [100003 &minus; 200003<i>k</i> + 300007<i>k</i><sup>3</sup>] (modulo 1000000) &minus; 500000.<br />
+For 56 &le; <i>k</i> &le; 4000000, <i>s</i><sub><i>k</i></sub> = [<i>s</i><sub><i>k&minus;24</i></sub> + <i>s</i><sub><i>k&minus;55</i></sub> + 1000000] (modulo 1000000) &minus; 500000.</p>
+
+<p>Thus, <i>s</i><sub>10</sub> = &minus;393027 and <i>s</i><sub>100</sub> = 86613.</p>
+
+<p>The terms of <i>s</i> are then arranged in a 2000&times;2000 table, using the first 2000 numbers to fill the first row (sequentially), the next 2000 numbers to fill the second row, and so on.</p>
+
+<p>Finally, find the greatest sum of (any number of) adjacent entries in any direction (horizontal, vertical, diagonal or anti-diagonal).</p>
