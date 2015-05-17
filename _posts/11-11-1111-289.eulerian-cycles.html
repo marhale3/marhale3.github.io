@@ -1,0 +1,23 @@
+---
+layout: problem
+title: "Eulerian Cycles"
+problemId: 289
+answer: -1
+---
+
+<p>Let C(<var>x</var>,<var>y</var>) be a circle passing through the points (<var>x</var>,&thinsp;<var>y</var>), (<var>x</var>,&thinsp;<var>y</var>+1), (<var>x</var>+1,&thinsp;<var>y</var>) and (<var>x</var>+1,&thinsp;<var>y</var>+1).</p>
+
+<p>For positive integers m and n, let E(<var>m</var>,<var>n</var>) be a configuration which consists of the <var>m</var>&middot;<var>n</var> circles:<br />
+{ C(<var>x</var>,<var>y</var>): 0&thinsp;&#8804;&thinsp;<var>x</var>&thinsp;<&thinsp;<var>m</var>, 0&thinsp;&#8804;&thinsp;<var>y</var>&thinsp;<&thinsp;<var>n</var>, <var>x</var> and <var>y</var> are integers }</p>
+
+<p>An Eulerian cycle on E(<var>m</var>,<var>n</var>) is a closed path that passes through each arc exactly once.<br />
+Many such paths are possible on E(<var>m</var>,<var>n</var>), but we are only interested in those which are not self-crossing: 
+A non-crossing path just touches itself at lattice points, but it never crosses itself.</p>
+
+<p>The image below shows E(3,3) and an example of an Eulerian non-crossing path.<br />
+<div align='center'><img src="project/images/p289_euler.gif" /></div></p>
+
+<p>Let L(<var>m</var>,<var>n</var>) be the number of Eulerian non-crossing paths on E(<var>m</var>,<var>n</var>).<br />
+For example, L(1,2)&thinsp;=&thinsp;2, L(2,2)&thinsp;=&thinsp;37 and L(3,3)&thinsp;=&thinsp;104290.</p>
+
+<p>Find L(6,10) mod 10<sup>10</sup>.</p>

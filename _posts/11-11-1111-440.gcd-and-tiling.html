@@ -1,0 +1,26 @@
+---
+layout: problem
+title: "GCD and Tiling"
+problemId: 440
+answer: -1
+---
+
+<p>We want to tile a board of length <var>n</var> and height 1 completely, with either 1 &times; 2 blocks or 1 &times; 1 blocks with a single decimal digit on top:</p>
+
+<img src="project/images/p440_tiles.png" />
+
+<p>For example, here are some of the ways to tile a board of length <var>n</var> = 8:</p>
+
+<img src="project/images/p440_some8.png" />
+
+<p>Let T(<var>n</var>) be the number of ways to tile a board of length <var>n</var> as described above.</p>
+
+<p>For example, T(1) = 10 and T(2) = 101.</p>
+
+<p>Let S(<var>L</var>) be the triple sum &sum;<sub><var>a</var>,<var>b</var>,<var>c</var></sub> gcd(T(<var>c</var><sup><var>a</var></sup>), T(<var>c</var><sup><var>b</var></sup>)) for 1 &le; <var>a</var>, <var>b</var>, <var>c</var> &le; <var>L</var>.<br />
+For example:<br />
+S(2) = 10444<br />
+S(3) = 1292115238446807016106539989<br />
+S(4) mod 987&nbsp;898&nbsp;789 = 670616280.</p>
+
+<p>Find S(2000) mod 987&nbsp;898&nbsp;789.</p>

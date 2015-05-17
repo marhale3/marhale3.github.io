@@ -1,0 +1,21 @@
+---
+layout: problem
+title: "Three similar triangles"
+problemId: 299
+answer: -1
+---
+
+<p>Four points with integer coordinates are selected:<br />A(<var>a</var>,&nbsp;0), B(<var>b</var>,&nbsp;0), C(0,&nbsp;<var>c</var>) and D(0,&nbsp;<var>d</var>), 
+with 0&nbsp;&lt;&nbsp;<var>a</var>&nbsp;&lt;&nbsp;<var>b</var> and 0&nbsp;&lt;&nbsp;<var>c</var>&nbsp;&lt;&nbsp;<var>d</var>.<br />
+Point P, also with integer coordinates, is chosen on the line AC so that the three triangles ABP, CDP and BDP are all <dfn title="Have equal angles">similar</dfn>.</p>
+<div align='center'><img src="project/images/p299_ThreeSimTri.gif" /></div>
+<p>It is easy to prove that the three triangles can be similar, only if <var>a</var>=<var>c</var>.</p>
+
+<p>So, given that <var>a</var>=<var>c</var>, we are looking for triplets (<var>a</var>,<var>b</var>,<var>d</var>) such that at least one point P (with integer coordinates) exists on AC, making the three triangles ABP, CDP and BDP all similar.</p>
+
+<p>For example, if (<var>a</var>,<var>b</var>,<var>d</var>)=(2,3,4), it can be easily verified that point P(1,1) satisfies the above condition. 
+Note that the triplets (2,3,4) and (2,4,3) are considered as distinct, although point P(1,1) is common for both.</p>
+
+<p>If <var>b</var>+<var>d</var>&nbsp;&lt;&nbsp;100, there are 92 distinct triplets (<var>a</var>,<var>b</var>,<var>d</var>) such that point P exists.<br />
+If <var>b</var>+<var>d</var>&nbsp;&lt;&nbsp;100 000, there are 320471 distinct triplets (<var>a</var>,<var>b</var>,<var>d</var>) such that point P exists.</p>
+<p>If <var>b</var>+<var>d</var>&nbsp;&lt;&nbsp;100 000 000, how many distinct triplets (<var>a</var>,<var>b</var>,<var>d</var>) are there such that point P exists?</p>

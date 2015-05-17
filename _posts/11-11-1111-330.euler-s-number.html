@@ -1,0 +1,113 @@
+---
+layout: problem
+title: "Euler's Number"
+problemId: 330
+answer: -1
+---
+
+An infinite sequence of real numbers <var>a</var>(<var>n</var>) is defined for all integers <var>n</var> as follows:
+<div align='center'><img src="project/images/p330_formula.gif" /></div>
+
+<p>For example,<br />
+<table class="formula"><tr>
+    <td><var>a</var>(0) = </td>
+    <td><table class="frac">
+        <tr><td>1</td></tr>
+        <tr><td class="overline">1!</td></tr>
+        </table>
+    </td>
+    <td>+</td>
+    <td><table class="frac">
+        <tr><td>1</td></tr>
+        <tr><td class="overline">2!</td></tr>
+        </table>
+    </td>
+    <td>+</td>
+    <td><table class="frac">
+        <tr><td>1</td></tr>
+        <tr><td class="overline">3!</td></tr>
+        </table>
+    </td>
+    <td>+ ... = e &minus; 1 </td>
+</tr></table>
+<table class="formula"><tr>
+    <td><var>a</var>(1) = </td>
+    <td><table class="frac">
+        <tr><td>e &minus; 1</td></tr>
+        <tr><td class="overline">1!</td></tr>
+        </table>
+    </td>
+    <td>+</td>
+    <td><table class="frac">
+        <tr><td>1</td></tr>
+        <tr><td class="overline">2!</td></tr>
+        </table>
+    </td>
+    <td>+</td>
+    <td><table class="frac">
+        <tr><td>1</td></tr>
+        <tr><td class="overline">3!</td></tr>
+        </table>
+    </td>
+    <td>+ ... = 2e &minus; 3 </td>
+</tr></table>
+<table class="formula"><tr>
+    <td><var>a</var>(2) = </td>
+    <td><table class="frac">
+        <tr><td>2e &minus; 3</td></tr>
+        <tr><td class="overline">1!</td></tr>
+        </table>
+    </td>
+    <td>+</td>
+    <td><table class="frac">
+        <tr><td>e &minus; 1</td></tr>
+        <tr><td class="overline">2!</td></tr>
+        </table>
+    </td>
+    <td>+</td>
+    <td><table class="frac">
+        <tr><td>1</td></tr>
+        <tr><td class="overline">3!</td></tr>
+        </table>
+    </td>
+    <td>+ ... =</td>
+    <td><table class="frac">
+        <tr><td>7</td></tr>
+        <tr><td class="overline">2</td></tr>
+        </table>
+    </td>
+    <td>e &minus; 6 </td>
+</tr></table>
+with e = 2.7182818... being Euler's constant.
+</p>
+<p>
+<table class="formula"><tr>
+    <td>It can be shown that <var>a</var>(<var>n</var>) is of the form 
+    </td>
+    <td><table class="frac">
+        <tr><td>A(<var>n</var>) e + B(<var>n</var>)</td></tr>
+        <tr><td class="overline"><var>n</var>!</td></tr>
+        </table>
+    </td>
+    <td>for integers A(<var>n</var>) and B(<var>n</var>). 
+    </td>
+</tr></table>
+<table class="formula"><tr>
+    <td>For example <var>a</var>(10) = 
+    </td>
+    <td><table class="frac">
+        <tr><td>328161643 e &minus; 652694486</td></tr>
+        <tr><td class="overline">10!</td></tr>
+        </table>
+    </td>
+    <td>.</td>
+</tr></table>
+</p>
+
+
+<P>
+Find A(10<sup>9</sup>) + B(10<sup>9</sup>) and give your answer mod 77 777 777.
+</P>
+
+
+

@@ -1,0 +1,26 @@
+---
+layout: problem
+title: "Number Sequence Game"
+problemId: 477
+answer: -1
+---
+
+<p>The number sequence game starts with a sequence <var>S</var> of <var>N</var> numbers written on a line.</p>
+<p>Two players alternate turns. At his turn, a player must select and remove either the first or the last number remaining in the sequence.</p>
+<p>The player score is the sum of all the numbers he has taken. Each player attempts to maximize his own sum.</p>
+</p>If <var>N</var> = 4 and <var>S</var> = {1, 2, 10, 3}, then each player maximizes his score as follows:</p>
+<ul>
+<li>Player 1: removes the first number (1)</li>
+<li>Player 2: removes the last number from the remaining sequence (3)</li>
+<li>Player 1: removes the last number from the remaining sequence (10)</li>
+<li>Player 2: removes the remaining number (2)</li>
+</ul>
+<p>Player 1 score is 1 + 10 = 11.</p>
+<p>Let <var>F</var>(<var>N</var>) be the score of player 1 if both players follow the optimal strategy for the sequence <var>S</var> = {<var>s</var><sub>1</sub>, <var>s</var><sub>2</sub>,&nbsp;...,&nbsp;<var>s<sub>N</var></sub>} defined as:</p>
+<ul>
+<li><var>s</var><sub>1</sub> = 0</li>
+<li><var>s</var><sub><var>i</var>+1</sub> = (<var>s<sub>i</sub></var><sup>2</sup> + 45) modulo 1 000 000 007</li>
+</ul>
+<p>The sequence begins with <var>S</var>&nbsp;=&nbsp;{0,&nbsp;45,&nbsp;2070,&nbsp;4284945,&nbsp;753524550,&nbsp;478107844,&nbsp;894218625,&nbsp;...}.</p>
+<p>You are given <var>F</var>(2)&nbsp;=&nbsp;45, <var>F</var>(4)&nbsp;=&nbsp;4284990, <var>F</var>(100)&nbsp;=&nbsp;26365463243, <var>F</var>(10<sup>4</sup>)&nbsp;=&nbsp;2495838522951.</p>
+<p>Find <var>F</var>(10<sup>8</sup>).</p>

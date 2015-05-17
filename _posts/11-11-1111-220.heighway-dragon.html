@@ -1,0 +1,24 @@
+---
+layout: problem
+title: "Heighway Dragon"
+problemId: 220
+answer: -1
+---
+
+<p>Let <b><i>D</i></b><sub>0</sub> be the two-letter string &quot;Fa&quot;.  For n&ge;1, derive <b><i>D</i></b><sub>n</sub> from <b><i>D</i></b><sub>n-1</sub> by the string-rewriting rules:</p>
+
+<p style="margin-left:40px;">&quot;a&quot; &rarr; &quot;aRbFR&quot;<br />
+&quot;b&quot; &rarr; &quot;LFaLb&quot;</p>
+
+<p>Thus, <b><i>D</i></b><sub>0</sub> = &quot;Fa&quot;, <b><i>D</i></b><sub>1</sub> = &quot;FaRbFR&quot;, <b><i>D</i></b><sub>2</sub> = &quot;FaRbFRRLFaLbFR&quot;, and so on.</p>
+
+<p>These strings can be interpreted as instructions to a computer graphics program, with &quot;F&quot; meaning &quot;draw forward one unit&quot;, &quot;L&quot; meaning &quot;turn left 90 degrees&quot;, &quot;R&quot; meaning &quot;turn right 90 degrees&quot;, and &quot;a&quot; and &quot;b&quot; being ignored.  The initial position of the computer cursor is (0,0), pointing up towards (0,1).</p>
+
+<p>Then <b><i>D</i></b><sub>n</sub> is an exotic drawing known as the <i>Heighway Dragon</i> of order <i>n</i>.  For example, <b><i>D</i></b><sub>10</sub> is shown below; counting each &quot;F&quot; as one step, the highlighted spot at (18,16) is the position reached after 500 steps.</p>
+
+<div style="text-align:center;">
+<img src="project/images/p220.gif" alt="" /></div>
+
+<p>What is the position of the cursor after 10<sup>12</sup> steps in <b><i>D</i></b><sub>50</sub> ?<br />
+Give your answer in the form <i>x</i>,<i>y</i> with no spaces.</p>
+

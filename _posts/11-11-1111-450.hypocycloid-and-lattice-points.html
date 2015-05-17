@@ -1,0 +1,42 @@
+---
+layout: problem
+title: "Hypocycloid and Lattice points"
+problemId: 450
+answer: -1
+---
+
+<P>
+A hypocycloid is the curve drawn by a point on a small circle rolling inside a larger circle. The parametric equations of a hypocycloid centered at the origin, and starting at the right most point is given by:</P><P style="text-align:center">
+$x(t) = (R - r) \cos(t) + r \cos(\frac {R - r} r t)$<BR />
+$y(t) = (R - r) \sin(t) - r \sin(\frac {R - r} r t)$</P><P>
+Where <var>R</var> is the radius of the large circle and <var>r</var> the radius of the small circle.
+</P>
+<P>
+Let $C(R, r)$ be the set of distinct points with integer coordinates on the hypocycloid with radius <var>R</var> and <var>r</var> and for which there is a corresponding value of <var>t</var> such that $\sin(t)$ and $\cos(t)$ are rational numbers.</P>
+<P>
+Let $S(R, r) = \sum_{(x,y) \in C(R, r)} |x| + |y|$ be the sum of the absolute values of the <var>x</var> and <var>y</var> coordinates of the points in $C(R, r)$.</P>
+<P>
+
+Let $T(N) = \sum_{R = 3}^N \sum_{r=1}^{\lfloor \frac {R - 1} 2 \rfloor} S(R, r)$ be the sum of $S(R, r)$ for <var>R</var> and <var>r</var> positive integers, $R\leq N$  and $2r < R$.
+</P>
+<P>
+
+You are given:<BR />
+
+<var>C</var>(3, 1) = {(3, 0), (-1, 2), (-1,0), (-1,-2)}<BR /><BR />
+<var>C</var>(2500, 1000) =<BR />
+<ul>
+ {(2500, 0), (772, 2376), (772, -2376), (516, 1792),
+ (516, -1792), (500, 0), (68, 504), (68, -504),<BR />(-1356, 1088), (-1356, -1088), (-1500, 1000), (-1500, -1000)}</ul>
+<i>Note: (-625, 0) is not an element of C(2500, 1000) because $\sin(t)$ is not a rational number for the corresponding values of <var>t</var>.</i>
+</p>
+<P>
+<var>S</var>(3, 1) = (|3| + |0|) + (|-1| + |2|) + (|-1| + |0|) + (|-1| + |-2|) = 10</P>
+<P>
+<var>T</var>(3) = 10; <var>T</var>(10) = 524 ;<var>T</var>(100) = 580442; <var>T</var>(10<sup>3</sup>) = 583108600.
+</p>
+<P>
+Find <var>T</var>(10<sup>6</sup>).
+</P>
+
+

@@ -1,0 +1,20 @@
+---
+layout: problem
+title: "Retractions B"
+problemId: 446
+answer: -1
+---
+
+<P>
+For every integer n&gt;1, the family of functions f<sub>n,a,b</sub>  is defined 
+by f<sub>n,a,b</sub>(<var>x</var>)&equiv;a<var>x</var>+b mod n for a,b,<var>x</var> integer and  0&lt;a&lt;n, 0&le;b&lt;n, 0&le;<var>x</var>&lt;n.<BR />
+We will call f<sub>n,a,b</sub> a <i>retraction</i> if f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(<var>x</var>))&equiv;f<sub>n,a,b</sub>(<var>x</var>) mod n for every 0&le;<var>x</var>&lt;n.<BR />
+Let R(n) be the number of retractions for n.
+</P>
+<P>
+F(N)=&sum;R(n<sup>4</sup>+4) for 1&le;n&le;N. <BR /> 
+F(1024)=77532377300600.<BR />
+</P>
+<P>
+Find F(10<sup>7</sup>) (mod 1 000 000 007)
+
