@@ -26,6 +26,10 @@ layout: global
 	<div id="answerIdOk" style="display:none">
 		پاسخ صحیح: <strong>{{ page.answer }}</strong><br />
 		حل شده در <span id="solvedAt"></span>
+		<br><br>
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Forum">
+  تالار گفتگو برای این سوال
+</button>
 	</div>
   </div>
 </div>	
@@ -44,3 +48,30 @@ layout: global
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+
+<!-- Forum -->
+<div class="modal fade" id="Forum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">تالار گفتگو</h4>
+      </div>
+      <div class="modal-body">
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES * * */
+			var disqus_shortname = 'marhale3';
+			
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
+</div>
