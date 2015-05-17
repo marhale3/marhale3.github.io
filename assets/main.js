@@ -180,3 +180,5 @@ if(!(typeof(Storage) !== "undefined")) {
     // Sorry! No Web Storage support..
 	humane.log('متاسفیم! برای کارکردن این وب‌سایت، نیاز هست تا مرورگر شما از Storage پشتیبانی کند! :(');
 }
+
+$('[data-toggle="tooltip"]').tooltip();

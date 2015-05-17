@@ -18,60 +18,26 @@
 
 
 body {
-	font-family: 'Open Sans', Yekan, Tahoma;
+	font-family: Yekan, Tahoma;
 	padding-top: 10px;
 	font-size: 15px;
+	padding-top: 70px;
+}
+
+.tooltip {
+	font-family: Yekan, Tahoma;
 }
 
 footer {
 	font-size: 11px;
 	border-top: 1px solid #eee;
 	padding: 5px 0;
+	font-family: Tahoma;
 }
 
-.themeurl {
-	font-size: 11px!important;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	min-width: 100px;
-}
-
-.dir-ltr {
-	direction: ltr;
-}
-
-
-/* RTL */
-html[dir=rtl] .table th,
-html[dir=rtl] .table td {
-	text-align: right;
-}
-
-html[dir=rtl] table#content thead tr .header:after {
-	float: left;
-}
-
-html[dir=rtl] #copieds {
-	right: auto;
-	left: 30px;
-}
-
-html[dir=rtl] .navbar-brand {
-	float: right;
-}
-
-@media (min-width: 768px)
-{
-	html[dir=rtl] .navbar-header, html[dir=rtl] .navbar-nav {
-		float: right;
-		padding-right: 0;
-		padding-right: 10px;
-	}
-	
-	html[dir=rtl] .navbar-left {
-		margin-left: -15px;
-	}
+.pagination {
+	font-family: Tahoma;
+	font-size: 12px;
 }
 
 
