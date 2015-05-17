@@ -1,4 +1,4 @@
-# marhale3.github.io
-مرحله ۳ - پروجکت اویلر فارسی
+# مرحله ۳
+پروجکت اویلر فارسی
 
-http://marhale3.github.com
+http://marhale3.github.io
