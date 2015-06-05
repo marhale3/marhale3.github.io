@@ -1,6 +1,7 @@
 ---
 layout: global
 ---
+<div class="container">
 <div id="problemNextPrevious">
 	<div class="pull-right">
 		{% if page.next.url %}<a href="{{ page.next.url }}" data-toggle="tooltip" data-placement="top" title="سوال بعدی - {{ page.next.title }}">{% endif %}
@@ -12,6 +13,13 @@ layout: global
 			<span class="glyphicon glyphicon-arrow-left"></span>
 		{% if page.previous.url %}</a>{% endif %}
 	</div>
+	{% if page.difficulty > 0 %}
+		<div class="progress" data-toggle="tooltip" data-placement="top" title="دشواری: {{ page.difficulty }}%" style="margin: 0 30px">
+		  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ page.difficulty }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ page.difficulty }}%">
+			<span class="sr-only">دشواری: {{ page.difficulty }}%</span>
+		  </div>
+		</div>
+	{% endif %}
 </div>
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -27,13 +35,6 @@ layout: global
 	</h3>
   </div>
   <div class="panel-body" dir="auto">
-	{% if page.difficulty > 0 %}
-		<div class="progress" data-toggle="tooltip" data-placement="top" title="دشواری: {{ page.difficulty }}%">
-		  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ page.difficulty }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ page.difficulty }}%">
-			<span class="sr-only">دشواری: {{ page.difficulty }}%</span>
-		  </div>
-		</div>
-	{% endif %}
 	{{ content }}
   </div>
 </div>
@@ -98,4 +99,5 @@ layout: global
       </div>
     </div>
   </div>
+</div>
 </div>

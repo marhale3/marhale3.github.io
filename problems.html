@@ -2,6 +2,23 @@
 layout: global
 title: لیست سوالات
 ---
+<div class="container">
+<div class="pull-left">
+	<!-- Split button -->
+	<div class="btn-group">
+	  <button type="button" class="btn btn-danger">فیلتر سوالات</button>
+	  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu">
+		<li><a href="#allProblems" id="filterProblems-all">همه سوالات</a></li>
+		<li><a href="#solvedProblems" id="filterProblems-solved">حل شده</a></li>
+		<li><a href="#unSolvedProblems" id="filterProblems-unSolved">حل نشده</a></li>
+	  </ul>
+	</div>
+</div>
+<ul class="problemsPaginate pagination"></ul>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		لیست سوالات
@@ -24,4 +41,6 @@ title: لیست سوالات
 			</a>
 		{% endfor %}
 	</div>
+</div>
+<ul class="problemsPaginate pagination"></ul>
 </div>
