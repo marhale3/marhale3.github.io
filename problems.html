@@ -3,6 +3,10 @@ layout: global
 title: لیست سوالات
 ---
 <div class="container">
+<ol class="breadcrumb">
+  <li><a href="/index.html">خانه</a></li>
+  <li class="active">پرسش‌ها</li>
+</ol>
 <div class="pull-left">
 	<!-- Split button -->
 	<div class="btn-group">
@@ -18,7 +22,7 @@ title: لیست سوالات
 	  </ul>
 	</div>
 </div>
-<ul class="problemsPaginate pagination"></ul>
+<ul class="problemsPaginate pagination pagination-sm"></ul>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		لیست سوالات
@@ -26,19 +30,27 @@ title: لیست سوالات
 	<div class="list-group" id="problems">
 		{% assign problems = site.posts | sort: "id" %}
 		{% for problem in problems %}
-			<a class="list-group-item problem" href="{{ problem.url }}" data-answer="{{ problem.answer }}" data-problem="{{ problem.problemId }}">
-			<small class="pull-left solved" style="display:none">
-				حل‌شده در: <span class="solvedAt"></span>
-			</small>
-			<strong>{{ problem.problemId }} -</strong> {{ problem.title }}
-			{% if problem.difficulty > 0 %}
-				<div class="progress problemDifficulty" data-toggle="tooltip" data-placement="left" title="دشواری: {{ problem.difficulty }}%">
-				  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ problem.difficulty }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ problem.difficulty }}%">
-					<span class="sr-only">دشواری: {{ problem.difficulty }}%</span>
-				  </div>
+			<div class="row problem list-group-item" data-answer="{{ problem.answer }}" data-problem="{{ problem.problemId }}">
+				<div class="col-md-6 col-sm-7">
+					<a class="" href="{{ problem.url }}">
+						<strong>{{ problem.problemId }} -</strong> {{ problem.title }}
+					</a>
 				</div>
-			{% endif %}
-			</a>
+				<div class="col-md-4 col-sm-3">
+				{% if problem.difficulty > 0 %}
+					<div class="progress problemDifficulty" data-toggle="tooltip" data-placement="top" title="دشواری: {{ problem.difficulty }}%">
+					  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ problem.difficulty }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ problem.difficulty }}%">
+						<span class="sr-only">دشواری: {{ problem.difficulty }}%</span>
+					  </div>
+					</div>
+				{% endif %}
+				</div>
+				<div class="col-md-2 col-sm-2">
+					<small class="pull-left solved" style="display:none">
+						حل‌شده در: <span class="solvedAt"></span>
+					</small>
+				</div>
+			</div>
 		{% endfor %}
 	</div>
 </div>

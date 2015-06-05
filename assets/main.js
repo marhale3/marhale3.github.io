@@ -195,6 +195,7 @@ if(!(typeof(Storage) !== "undefined")) {
 
 $('[data-toggle="tooltip"]').tooltip();
 var nowPage = 1;
+
 function setPage(page) {
 	if(!page) {
 		page = nowPage;
@@ -204,7 +205,7 @@ function setPage(page) {
 	$('.problem').each(function() {
 		if(!$(this).hasClass('hidden')) {
 			i++;
-			if(i > (page-1)*50 && i <= page*50) {
+			if(i > (page-1)*20 && i <= page*20) {
 				$(this).show();
 			} else {
 				$(this).hide();
@@ -220,7 +221,7 @@ function rebuildPagination(dontDestroy) {
 	if(!dontDestroy)
 		$('.problemsPaginate').twbsPagination('destroy');
 	$('.problemsPaginate').twbsPagination({
-		totalPages: Math.ceil(numProblems/50),
+		totalPages: Math.ceil(numProblems/20),
 		visiblePages: 5,
 		startPage: 1,
 		first: '««',
@@ -234,7 +235,7 @@ function rebuildPagination(dontDestroy) {
 }
 
 $('.problemsPaginate').twbsPagination({
-	totalPages: Math.ceil($('.problem').length/50),
+	totalPages: Math.ceil($('.problem').length/20),
 	visiblePages: 5,
 	startPage: 1,
 	first: '««',

@@ -2,6 +2,11 @@
 layout: global
 ---
 <div class="container">
+<ol class="breadcrumb">
+  <li><a href="/index.html">خانه</a></li>
+  <li><a href="/problems.html">پرسش‌ها</a></li>
+  <li class="active">{{ page.title }}</li>
+</ol>
 <div id="problemNextPrevious">
 	<div class="pull-right">
 		{% if page.next.url %}<a href="{{ page.next.url }}" data-toggle="tooltip" data-placement="top" title="سوال بعدی - {{ page.next.title }}">{% endif %}

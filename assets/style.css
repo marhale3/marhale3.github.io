@@ -38,11 +38,17 @@ footer {
 .pagination {
 	font-family: Tahoma;
 	font-size: 12px;
+
+}
+
+.problem {
+	margin: 0;
+	border-bottom: none;
 }
 
 .problemDifficulty {
 	display: inline-block;
-	width: 30%;
+	width: 100%;
 	height: 15px;
 	vertical-align: middle;
 	margin: 0 5px;
