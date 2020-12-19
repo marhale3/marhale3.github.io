@@ -27,6 +27,7 @@ title: لیست سوالات
 	<div class="panel-heading">
 		لیست سوالات
 	</div>
+	{% assign problems = site.posts | sort: "id" %}
 	<div class="list-group" id="problems">
 		{% assign problems = site.posts | sort: "id" %}
 		{% for problem in problems %}
