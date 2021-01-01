@@ -1,8 +1,8 @@
 permalink: /problem/:title
 name: "مرحله ۳"
 encoding: utf-8
-url: https://marhale3.github.io/
-baseurl: 
+url: https://marhale3.github.io
+baseurl: /
 markdown: kramdown
 
 # Jekyll 3 now only supports Kramdown for Markdown
