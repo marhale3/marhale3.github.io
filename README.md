@@ -1,4 +1,6 @@
-# مرحله ۳
+<div dir="rtl">
+
+# مرحله ۳ - پروجکت‌اویلر فارسی
 https://marhale3.github.io
 
 مرحله ۳، تلاشی جمعی برای ترجمه‌ی سوالات وب‌سایت 
@@ -25,3 +27,5 @@ docker-compse up
 
 - https://github.com/shaazzz/FarsiCP
 - [ترجمه‌ای از ۴۰ سوال نخست پروجکت اویلر](http://bayanbox.ir/info/2101678563655685091/Problems-Euler-1)
+
+</div>
