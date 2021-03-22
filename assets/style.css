@@ -187,3 +187,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 }
 
+.katex {
+  direction: ltr!important;
+  display: inline-block;
+}
