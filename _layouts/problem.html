@@ -63,19 +63,17 @@ layout: global
   </div>
 </div>	
 
-<script type="text/x-mathjax-config">
-   MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-         inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-         displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
-         processEscapes: true
-      },
-      "HTML-CSS": { availableFonts: ["TeX"] }
-   });
-</script>
-<script type="text/javascript"
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8+w2LAIftJEULZABrF9PPFv+tVkH" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js" integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB+w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v" crossorigin="anonymous"></script>
+<script>
+	renderMathInElement(document.body, {
+		delimiters: [
+			{left: "$$", right: "$$", display: true},
+			{left: "$", right: "$", display: false},
+			{left: "\\(", right: "\\)", display: false},
+			{left: "\\[", right: "\\]", display: true}
+		],
+	});
 </script>
 
 <!-- Forum -->
