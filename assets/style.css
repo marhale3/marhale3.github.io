@@ -1,3 +1,13 @@
+:root {
+  --color-markdown-code-bg: rgba(27,31,35,0.05);
+  --color-markdown-frame-border: #dfe2e5;
+  --color-markdown-blockquote-border: #dfe2e5;
+  --color-markdown-table-border: #dfe2e5;
+  --color-markdown-table-tr-border: #c6cbd1;
+  --color-bg-tertiary: #f7f7f7;
+  --color-bg-primary: #fffff;
+}
+
 ::selection{
 	background: rgba(255, 200, 0, 0.4);
 }
@@ -183,4 +193,9 @@ body {
 
 pre {
   direction: ltr;
+}
+
+.markdown-body {
+  font-family: 'Vazir', sans-serif;
+  font-size: 15px;
 }

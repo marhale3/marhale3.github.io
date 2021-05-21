@@ -39,7 +39,7 @@ layout: global
 	<h3 class="panel-title">{{ page.title }}
 	</h3>
   </div>
-  <div class="panel-body" dir="{% if page.dir == 'rtl' or page.dir == 'ltr' %}{{ page.dir}}{% else %}auto{% endif %}">
+  <div class="markdown-body panel-body" dir="{% if page.dir == 'rtl' or page.dir == 'ltr' %}{{ page.dir}}{% else %}auto{% endif %}">
 	{{ content }}
   </div>
 </div>
